@@ -12,6 +12,9 @@ gem 'jquery-rails'
 gem 'devise-bootstrap-views'
 gem 'stock_quote'
 gem 'iex-ruby-client'
+gem "font-awesome-rails"
+gem "faraday"
+gem "octokit", github: "octokit/octokit.rb", ref: "ae5838a" 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets

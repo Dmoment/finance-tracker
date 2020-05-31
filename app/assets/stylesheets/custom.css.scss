@@ -1,0 +1,22 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.no-right-padding{
+    padding-right: 0 !important;
+}
+
+
+.no-left-padding{
+    padding-left: 0 !important;
+}
+
+.search-area{
+    padding-top: 50px;
+  }
+
+.result-block{
+    display: inline-block;
+}
+
+.top-buffer{
+    margin-top: 10px;
+}
