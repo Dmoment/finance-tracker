@@ -14,6 +14,8 @@ gem 'stock_quote'
 gem 'iex-ruby-client'
 gem "font-awesome-rails"
 gem "faraday"
+gem 'therubyracer'
+gem 'rubocop', require: false
 gem "octokit", github: "octokit/octokit.rb", ref: "ae5838a" 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
