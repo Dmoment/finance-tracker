@@ -21,5 +21,10 @@ class User < ApplicationRecord
   def can_track_stock?(ticker_symbol)
     stock_under_limit? && !stocks_already_tracked?(ticker_symbol)
   end
+
+  def full_name
+    return "#{first_name} #{last_name}" if first_name || last_name
+    "Anonymous"
+  end
         
 end
