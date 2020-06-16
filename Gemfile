@@ -17,6 +17,7 @@ gem "faraday"
 gem 'therubyracer'
 gem 'rubocop', require: false
 gem "octokit", github: "octokit/octokit.rb", ref: "ae5838a" 
+gem 'byebug'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
