@@ -52,5 +52,9 @@ class User < ApplicationRecord
   def self.match(field_name, params)
     where(" #{field_name} like ?", "%#{params}%")
   end
+
+  def not_friends_with?(friend_id)
+    !self.friends.where(id: friend_id).exists?
+  end
         
 end

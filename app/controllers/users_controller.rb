@@ -1,11 +1,17 @@
 class UsersController < ApplicationController
   def my_portfolio
     @tracked_stock = current_user.stocks #many to many association
+    @user = current_user
   end
 
   def my_friends
     @friends=current_user.friends
 
+  end
+
+  def show
+    @user =User.find(params[:id])
+    @tracked_stock = @user.stocks
   end
 
   def search
