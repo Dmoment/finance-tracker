@@ -11,8 +11,8 @@ class Stock < ApplicationRecord
         begin
         company= client.company(ticker_symbol).company_name
         price=client.price(ticker_symbol)
-        
-        new(ticker: ticker_symbol, name: company, last_price: price)
+        logo= client.logo(ticker_symbol)
+        new(ticker: ticker_symbol, name: company, last_price: price, logo: logo.url)
         rescue => exception
             return nil
         end    
