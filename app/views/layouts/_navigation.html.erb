@@ -45,9 +45,16 @@
                 <%= link_to 'Logout',destroy_user_session_path,method: :delete,class: 'btn btn-danger logout-btn'%>
                 
               </li>
+             
           </ul>
           
-    <% end%>      
+    <% else%>
+       <li class="nav-item">
+                
+          <%= link_to 'Signin',user_session_path,class: 'btn btn-danger logout-btn'%>
+                
+        </li>
+    <%end%>      
     
   </div>
 </nav>
