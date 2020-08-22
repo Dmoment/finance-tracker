@@ -13,7 +13,13 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <div id="password-strength" class="form">
+    
+    <%= f.password_field :password, autocomplete: "new-password" , id: "password-input",onKeyUp: measureFunction()%>
+    <br><br>
+    <span>Your password is:</span>
+    <span id="strength-level"></span>
+    </div>
   </div>
 
   <div class="field">
@@ -25,5 +31,5 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
+<script src="/javascript/custom/password_checker">
 <%= render "confirmables/shared/links" %>
