@@ -39,7 +39,9 @@
 
   <div class="form-group">
     <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control' %>
+    <%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control', id: "passwordTwo", onKeyUp: "confirmPassword()"%>
+    <span>Match status:</span>
+    <span id="matchStatus"></span>
   </div>
 
   <div class="form-group">
@@ -74,4 +76,21 @@
     strengthElem.innerText = strengthLevel;
   
   }
+</script>
+<script>
+function confirmPassword(){
+  let password1=document.getElementById("password-input").value
+  let password2=document.getElementById("passwordTwo").value
+  let matchStatus1=document.getElementById("matchStatus")
+  var matchStatus= "Not matched";
+
+  if((password1 == password2)&& (password1.length>6)&&(password2.length>6)){
+    matchStatus= "password matched";
+
+  }else {
+    matchStatus="Not matched";
+  }
+matchStatus1.className=matchStatus.toLowerCase().replace(' ','-');
+matchStatus1.innerText=matchStatus;
+}
 </script>
