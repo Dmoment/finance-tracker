@@ -23,4 +23,7 @@ import "bootstrap"
 $( document ).on('turbolinks:load', function() {
     console.log("It works on each visit!")
   })
-  
+  // Support component names relative to this directory:
+var componentRequireContext = require.context("components", true);
+var ReactRailsUJS = require("react_ujs");
+ReactRailsUJS.useContext(componentRequireContext);
